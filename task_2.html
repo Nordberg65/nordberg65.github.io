@@ -1,11 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание на дом - Отгадайте загадку и воссоздайте html структуру странички</title>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <h1>Загадка!</h1>
+    <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: ИЩИ В ОДНОМ ИЗ ДИВОВ</h5>
+    <mark>Я зашифровал слово, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
+
+    <div>
+        <h2>жявягйябдйя</h2>
+        <form action="" id="quizForm">
+            <input type="text">
+            <input type="submit" value="Ответ" id="secret">
+        </form>
+        <p id="answer"></p>
+        <!-- ОТВЕТ: 85637-->
+    </div>
+    <div>
+        <strong>Подсказка: </strong>
+        <small>Шифр был придуман древнеримским <i>Диктатором!</i></small>
+    </div>
 </body>
+
+
+<script>
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    var x = document.getElementById("quizForm");
+    const answ = x.elements[0].value;
+    if (answ === 'загадкавека') {
+        const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
+        document.getElementById("answer").innerHTML = text;
+    } else {
+        const text = 'Неа, попробуй еще разок &#9940;'
+        document.getElementById("answer").innerHTML = text;        
+    }
+});
+
+</script>
 </html>
