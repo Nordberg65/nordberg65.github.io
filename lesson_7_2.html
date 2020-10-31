@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .contanier:hover {
+            box-shadow: 1px 1px 0px 0px darkred,
+                        2px 2px 0px 0px darkred,
+                        3px 3px 0px 0px darkred,
+                        4px 4px 0px 0px darkred,
+                        5px 5px 0px 0px darkred,
+                        6px 6px 0px 0px darkred,
+                        7px 7px 0px 0px darkred;
+            transform: translate(-7px, -7px);
+        }
+        .contanier {
+            display: flex;
+            width: 300px;
+            height: 400px;
+            background-color: red;
+            flex-direction: column;
+            transition: all ease-in .15s;
+        }
+        .item-1 {
+            display: flex;
+            height: 100%;
+            margin: .4em;
+            background-color: navy;
+        }
+        .item-2 {
+            display: flex;
+            justify-content: space-around;
+            flex-basis: 20%;
+            
+        }
+        .info {
+            width: 150px;
+            margin: .3em;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <div class="item-1">
+
+        </div>
+        <div class="item-2">
+            <div class="info">
+
+            </div>
+            <div class="info">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
