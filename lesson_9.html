@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ХАчу НЕ деЛАть CSS</title>
+    <style>
+        .navbar {
+            display: flex;
+            width: 100%;
+            background-color:darkcyan;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+        }
+        body {
+            margin: 0;
+        }
+        .lego{
+            color:yellow;
+            padding: 1em;
+            font-weight: bold;
+            font-family: bottom;
+        }
+        .menu a {
+            color: darkorange;
+            padding: 1em;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .first, .second, .third{
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .first {
+            background-color: whitesmoke;
+        }
+        .second {
+            background-color: blue;
+        }
+        .third {
+            background-color: red;
+        }
+        .contanier {
+            border: 5px solid darkorange;
+            padding: 5em;
+            border-radius: 5px;
+            transition: all ease .3s;
+        }
+        .contanier a {
+            font-size: 2em;
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contanier:hover {
+            background-color: darkorange;
+            box-shadow: 5px 5px 0 0 darkorange,
+                1px 1px 0 0 darkorange,
+                2px 2px 0 0 darkorange,
+                3px 3px 0 0 darkorange,
+                4px 4px 0 0 darkorange;
+            transform: translate(-5px, -5px);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="lego">
+            Lego
+        </div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#questions">Quest</a>
+            <a href="#about">About me</a>
+        </div>
+    </div>
+    <div class="first" id="home">
+        <div class="contanier">
+            <a href="home.html">Press "F"</a>
+        </div>
+    </div>
+    <div class="second" id="questions">
+        <div class="contanier">
+            <a href="questions.html">to be</a>
+        </div>
+    </div>
+    <div class="third" id="about">
+        <div class="contanier">
+            <a href="about.html">continues</a>
+        </div>
+    </div>
+</body>
+</html>
