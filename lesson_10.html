@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .picca {
+            color: whitesmoke;
+        }
+        h1:hover {
+            font-size: 10em;
+        }
+        input[type=text] {
+            background-color: blue;
+        }
+        input[type=text]:focus {
+            background-color: darkred;
+        }
+        a:active {
+            background-color: red;
+        }
+        a:visited {
+            color: red;
+        }
+        a:link {
+            color: darkred;
+        }
+        .fyre {
+            width: 200px;
+            height: 200px;
+            color: white;
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            position: relative;
+        }
+        .fyre::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 5px;
+            background-color: white;
+            top: 10%;
+        }
+        .fyre::after {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 5px;
+            background-color: white;
+            bottom: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="picca">Хачу пиццу</h1>
+    <form action="">
+        <input type="text" name="" id="">
+        <input type="submit" value="Поиск">
+    </form>
+    <a href="#">ХАчу мухамор</a>
+    <a href="act.html">2 соли</a>
+    <a href="not_act.html">5 сахара</a>
+    <div class="fyre">фюер</div>
+</body>
+</html>
