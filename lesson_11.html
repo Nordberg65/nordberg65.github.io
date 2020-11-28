@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #414a4c;
+        } 
+        .load {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 4px solid  #414a4c;
+            overflow: hidden;
+            box-shadow: -10px -10px 15px rgb(59, 59, 59),
+                        10px 10px 10px rgba(0, 0, 0, 0.1),
+                        inset -10px -10px 15px rgba(51, 49, 49, 0.5),
+                        inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+                        border-radius: 50%;
+        }
+        .load span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(white, blue, red);
+            z-index: -1;
+            animation: loader 0.5s linear infinite;
+        }
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .load::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            left: 25px;
+            bottom: 25px;
+            background-color:#414a4c;
+            border-radius: 50%;
+            border: 4px solid  #414a4c;
+            box-shadow: inset -10px -10px 15px rgba(51, 49, 49, 0.5),
+                        inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="load">
+        <span></span>
+    </div>
+</body>
+</html>
