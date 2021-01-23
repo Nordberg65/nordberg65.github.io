@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.grid-cat {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1.5fr 4fr 3fr 2fr;
+    grid-template-columns: 1fr 1.2fr 2fr;
+}
+main {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #FCB1B1;
+    position: relative;
+}
+.tasty-cat {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.healthy-cat {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    display: flex;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: rgb(248, 91, 117);
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icecat {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: green;
+    background-image: url('img/ice.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.locat span {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 75px;
+    padding: 0 50px;
+    cursor: pointer;
+}
+.tecat, h5, span {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #666666;
+}
+.tecat {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    font-size: 25px;
+    padding: 0;
+}
+.left, .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.catttt > div {
+    width: 35px;
+    height: 5px;
+    background-color: #c20808;
+    margin: 6px 0;
+}
