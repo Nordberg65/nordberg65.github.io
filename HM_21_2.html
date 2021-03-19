@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+				<title>Заголовок страницы</title>
+</head>
+<body>
+				
+				<script>
+								let nick = prompt()
+								console.log(nick)
+								if (nick.length > 6) {
+												window.alert(nick + ' '+'слишком длинный')
+								} else if (nick.length === 0) {
+												window.alert('Вы не ввели ник! ') 
+								} else if (nick.length >= 4 || nick.lenght <= 6) {
+											 window.alert(nick + ' '+'хорошее имя')
+								} else if (nick.length >= 1 || nick.length <= 3) {
+												window.alert(nick + ' '+'слишком короткий') 
+								} else {
+												console.log()
+								}
+				</script>
+</body>
+</html>
