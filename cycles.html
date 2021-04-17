@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let count = 0;
+        // while (count <= 6) {
+        //     console.log('Hello world!' + count)
+        //     count++
+        // }
+        // for (let i = 0; i < 10; i++) {
+        //     console.log('Hello world ' + i)
+        // }
+        // let chest = ['sword','sheild','potion']
+        // for (let i = 0; i <chest.length; i++) {
+        //     const element = chest[i];
+        //     console.log(element)
+        //     }
+        let words = ['apple', 'barbarian', 'glory']
+        let word = words[Math.floor(Math.random() * words.length)];
+        let template = [];
+        for (let i = 0; i < word.length; i++) {
+            template.push('_');
+        }
+        console.log(template)
+        let remainLetters = word.length
+        alert('Привет, я марсианин, отгадай слово состоящие из ' + remainLetters + ' букв и я исполню мечту Илон Маска')
+        while (remainLetters > 0) {
+            alert(template.join(''));
+            let guess = prompt('Введите букву: ')
+            if (guess === null) {
+                break;
+            } else if (guess.length !== 1) {
+                alert('Введите одну букву!!!!')
+            } else {
+                for (const key in word) {
+                    if (word[key] === guess){
+                        template[key] = guess;
+                        remainLetters--
+                    }
+                }
+            }
+        }
+        alert(template.join(""));
+        alert("Молодец, теперь мечта Илона Маска сбудется!")
+    </script>
+</body>
+</html>
