@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+
+        .first {
+            background-color: green;
+        }
+
+        .second {
+            background-color: white;
+        }
+
+        .third {
+            background-color: orange;
+        }
+
+        .first,
+        .second,
+        .third {
+            height: 100%;
+            width: 100vw;
+            flex: 0 0 auto;
+        }
+
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .info .bar {
+            width: 200px;
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="info" id="info">
+        <div class="bar">Майнкрафт моя жизнь!</div>
+    </div>
+    <script>
+        window.addEventListener('wheel', scrollHorizontally);
+        function scrollHorizontally(event) {
+            if (event.deltaY != 0) {
+                window.scroll(window.scrollX + event.deltaY * 0.5, window.scrollY);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #856c8b;
+        }
+        .main {
+            height: 100vh;
+        }
+        .first {
+            background-color: #d4ebd0;
+        }
+        .second {
+            background-color: #a4c5c6;
+        }
+        .first, .second {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20vh);
+            visibility: hidden;
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+            will-change: opacity, visibility;
+        }
+        .first.is-visible, .second.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div id="fadein_box_1" class="first">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem veritatis alias expedita fuga doloribus cumque hic maiores enim dicta, nostrum, corrupti eum! Facere repellat pariatur quis rerum, laboriosam enim explicabo!</p>
+    </div>
+    <div id="fadein_box_2" class="second">
+        <h1>Lorem ispum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dolorem eos aut ex explicabo porro, similique delectus incidunt quo labore quod sint. Praesentium totam sint sed quos inventore ipsum reiciendis.</p>
+    </div>
+    <div class="main"></div>
+    <script>
+        window.addEventListener('scroll', scrollEvent);
+        let fadeOne = document.querySelector('#fadein_box_1')
+        let fadeTwo = document.querySelector('#fadein_box_2')
+        function scrollEvent(event) {
+            if ((fadeOne.offsetTop + 200) < pageYOffset + window.innerHeight) {
+                fadeOne.classList.add('is-visible')
+            }
+            if ((fadeTwo.offsetTop + 200) < pageYOffset + window.innerHeight) {
+                fadeTwo.classList.add('is-visible')
+            }
+        }
+    </script>
+</body>
+</html>
